@@ -5,7 +5,6 @@ import Mail from "../assets/icons/Navbar/mail.svg";
 import Bell from "../assets/icons/Navbar/bell.svg";
 import Bars from "../assets/icons/Navbar/bars.svg";
 import Cart from "../assets/icons/Navbar/cart.svg";
-import Map from "../assets/icons/Navbar/map.svg";
 
 const Navbar = () => {
   return (
@@ -39,7 +38,11 @@ const Navbar = () => {
 
       <View style={{ position: "relative" }}>
         {/* <IonIcon color="#fff" name="mail-outline" size={26}></IonIcon> */}
-        <Mail style={{ color: "#fff", backgroundColor: "transparent" }}></Mail>
+        <Mail
+          width={27}
+          height={27}
+          style={{ color: "#fff", backgroundColor: "transparent" }}
+        ></Mail>
         <View
           style={{
             width: 18,
@@ -66,7 +69,11 @@ const Navbar = () => {
       </View>
       <View style={{ position: "relative" }}>
         {/* <IonIcon color="#fff" size={26} name="notifications-outline"></IonIcon> */}
-        <Bell style={{ color: "#fff", backgroundColor: "transparent" }}></Bell>
+        <Bell
+          width={27}
+          height={27}
+          style={{ color: "#fff", backgroundColor: "transparent" }}
+        ></Bell>
         <View
           style={{
             width: 18,
@@ -94,7 +101,11 @@ const Navbar = () => {
 
       <View style={{ position: "relative" }}>
         {/* <IonIcon color="#fff" size={26} name="cart-outline"></IonIcon> */}
-        <Cart style={{ color: "#fff", backgroundColor: "transparent" }}></Cart>
+        <Cart
+          width={27}
+          height={27}
+          style={{ color: "#fff", backgroundColor: "transparent" }}
+        ></Cart>
         <View
           style={{
             width: 18,
@@ -121,7 +132,11 @@ const Navbar = () => {
       </View>
       <View>
         {/* <IonIcon color="#fff" size={32} name="menu-outline"></IonIcon> */}
-        <Bars style={{ color: "#fff", backgroundColor: "transparent" }}></Bars>
+        <Bars
+          width={27}
+          height={27}
+          style={{ color: "#fff", backgroundColor: "transparent" }}
+        ></Bars>
       </View>
     </View>
   );

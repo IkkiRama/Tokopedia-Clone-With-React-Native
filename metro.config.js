@@ -13,6 +13,7 @@ module.exports = (() => {
     ...resolver,
     assetExts: resolver.assetExts.filter((ext) => ext !== "svg"),
     sourceExts: [...resolver.sourceExts, "svg"],
+    resolverMainFields: ["sbmodern", "browser", "main"],
   };
 
   return config;
