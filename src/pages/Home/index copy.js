@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Button,
   FlatList,
   Image,
   ScrollView,
@@ -10,13 +11,15 @@ import {
   View,
 } from "react-native";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import IonIcon from "@expo/vector-icons/Ionicons";
-import Menus from "../components/Menus";
-import Navbar from "../components/Navbar";
+import Navbar from "../../components/Navbar";
 import Map from "../assets/icons/Navbar/map.svg";
-import MainFitur from "../components/MainFitur";
+import MainFitur from "../../components/MainFitur";
 
-const TokopediaClone = () => {
+const TokopediaClone = ({ navigation }) => {
+  const onPressHandler = () => {
+    navigation.navigate("Coba");
+  };
+
   const [fiturAtas, setFiturAtas] = useState([
     {
       nama: "Spesial\nImlek",
@@ -103,7 +106,7 @@ const TokopediaClone = () => {
 
     {
       nama: "Bangga\nLokal",
-      image: require("../assets/images/fitur/18Bangga LokalBawah.png"),
+      image: require("../assets/images/fitur/18BanggaLokalBawah.png"),
     },
   ]);
 
@@ -145,11 +148,6 @@ const TokopediaClone = () => {
             {/* Map */}
             <View>
               <Text style={{ color: "#fff", marginTop: 10, fontSize: 15 }}>
-                {/* <FontAwesome5
-                  name="map-marker-alt"
-                  color="#fff"
-                  size={17}
-                ></FontAwesome5> */}
                 <Map width={17} height={17} style={{ color: "#fff" }}></Map>{" "}
                 Dikirim ke{" "}
                 <Text style={{ fontWeight: "800" }}>Rumah Rifki Romadhan</Text>
@@ -326,16 +324,13 @@ const TokopediaClone = () => {
                 </Text>
               </View>
 
-              <View></View>
+              <View style={{ marginTop: 300 }}>
+                <Button title="Back to Coba" onPress={onPressHandler}></Button>
+              </View>
             </View>
           </View>
         </View>
       </ScrollView>
-
-      {/* <View>
-        <Text>KAKAKA</Text>
-      </View> */}
-      {/* <Menus></Menus> */}
     </View>
   );
 };

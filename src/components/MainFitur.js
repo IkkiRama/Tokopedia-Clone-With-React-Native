@@ -1,7 +1,14 @@
-import { View, Text, FlatList, Image } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  Image,
+  TouchableOpacity,
+  Pressable,
+} from "react-native";
 import React from "react";
 
-const MainFitur = ({ fitur }) => {
+const MainFitur = ({ fitur, navigation }) => {
   return (
     <FlatList
       style={{
@@ -11,7 +18,8 @@ const MainFitur = ({ fitur }) => {
       horizontal
       showsHorizontalScrollIndicator={false}
       renderItem={({ item }) => (
-        <View
+        <Pressable
+          onPress={() => navigation.navigate(`${item.nama.trim()}Main`)}
           style={{
             alignItems: "center",
             marginHorizontal: 15,
@@ -30,7 +38,7 @@ const MainFitur = ({ fitur }) => {
           >
             {item.nama}
           </Text>
-        </View>
+        </Pressable>
       )}
     ></FlatList>
   );

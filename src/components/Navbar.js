@@ -1,5 +1,4 @@
 import { Text, TextInput, View } from "react-native";
-import IonIcon from "@expo/vector-icons/Ionicons";
 import Search from "../assets/icons/search.svg";
 import Mail from "../assets/icons/Navbar/mail.svg";
 import Bell from "../assets/icons/Navbar/bell.svg";
